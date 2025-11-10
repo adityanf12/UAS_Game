@@ -11,44 +11,31 @@ public class PlayerAnimator : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    public void UpdateState(float speed, bool isGrounded, bool isDashing, bool isAttacking)
+    public void UpdateState(float speed, bool isGrounded, bool isDashing, bool isAttacking, float verticalVelocity)
     {
         anim.SetFloat("Speed", speed);
+        anim.SetBool("IsGrounded", isGrounded);
         anim.SetBool("IsDashing", isDashing);
         anim.SetBool("IsAttacking", isAttacking);
 
-        // Jangan langsung ubah IsGrounded kalau baru saja lompat
-        if (!isJumping)
-            anim.SetBool("IsGrounded", isGrounded);
-        else if (isGrounded)
-        {
-            // Kalau mendarat, reset status lompat
-            isJumping = false;
-            anim.SetBool("IsGrounded", true);
-            anim.ResetTrigger("Jump");
-        }
+        // Animasi jatuh biasa
+        bool isFalling = !isGrounded && verticalVelocity < -0.1f;
+        anim.SetBool("IsFalling", isFalling);
 
-        // Deteksi jatuh
-        if (!isGrounded && !isJumping)
+        // Reset trigger lompat ketika mendarat
+        if (isGrounded && isJumping)
         {
-            anim.SetBool("IsFalling", true);
-        }
-        else
-        {
-            anim.SetBool("IsFalling", false);
+            isJumping = false;
+            anim.ResetTrigger("Jump");
         }
     }
 
     public void TriggerJump()
     {
-        if (!isJumping)
-        {
-            isJumping = true;
-            anim.SetBool("IsGrounded", false);
-            anim.SetBool("IsFalling", false);
-            anim.SetTrigger("Jump");
-            Debug.Log("Trigger Jump dipanggil ke Animator");
-        }
+        isJumping = true;
+        anim.ResetTrigger("Jump");
+        anim.SetTrigger("Jump");
+        anim.SetBool("IsGrounded", false);
     }
 
     public void TriggerDash()
@@ -59,5 +46,10 @@ public class PlayerAnimator : MonoBehaviour
     public void TriggerAttack()
     {
         anim.SetTrigger("Attack");
+    }
+
+    public void TriggerFallDeath()
+    {
+        anim.SetTrigger("FallDeath"); // tambahkan animasi ini di Animator
     }
 }

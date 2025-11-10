@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // untuk reload scene saat game over
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerAnimator))]
@@ -8,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float walkSpeed = 5f;
     public float runSpeed = 9f;
     public float jumpForce = 12f;
-    public int maxJumpCount = 2; // double jump
+    public int maxJumpCount = 2;
 
     [Header("Dash Settings")]
     public float dashForce = 500f;
@@ -31,8 +32,12 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded = false;
     private bool wasGrounded = false;
 
+    [Header("Game Over Settings")]
+    public float fallThresholdY = -10f; // posisi di bawah ini = jatuh game over
+    private bool isFallingToDeath = false;
+
     private int jumpCount = 0;
-    private float lastGroundedTime = 0f; // untuk "coyote time"
+    private float lastGroundedTime = 0f;
     private float coyoteTimeThreshold = 0.15f;
 
     private Rigidbody2D rb;
@@ -40,7 +45,7 @@ public class PlayerController : MonoBehaviour
     private PlayerAnimator playerAnimator;
     private Camera mainCamera;
 
-    // ====== NEW for run double tap ======
+    // ====== Running logic (double tap) ======
     private float lastLeftTap = 0f;
     private float lastRightTap = 0f;
     private float doubleTapTime = 0.3f;
@@ -67,12 +72,23 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // Cek jika player jatuh melewati batas kematian
+        if (!isFallingToDeath && transform.position.y < fallThresholdY)
+        {
+            isFallingToDeath = true;
+            playerAnimator.TriggerFallDeath(); // animasi jatuh
+            rb.simulated = false; // hentikan fisika
+            Invoke(nameof(HandleGameOver), 1.2f); // tunggu animasi selesai
+        }
+
         HandleTimers();
         HandleCameraFollow();
     }
 
     void FixedUpdate()
     {
+        if (isFallingToDeath) return;
+
         CheckGroundStatus();
         HandleMovement();
         HandleActions();
@@ -83,7 +99,8 @@ public class PlayerController : MonoBehaviour
             Mathf.Abs(rb.velocity.x),
             isGrounded,
             isDashing,
-            isAttacking
+            isAttacking,
+            rb.velocity.y
         );
     }
 
@@ -92,11 +109,9 @@ public class PlayerController : MonoBehaviour
         wasGrounded = isGrounded;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
 
-        // fallback: kalau vertikal velocity kecil, asumsikan grounded
         if (!isGrounded && Mathf.Abs(rb.velocity.y) < 0.05f)
             isGrounded = true;
 
-        // simpan waktu terakhir saat grounded
         if (isGrounded)
         {
             lastGroundedTime = Time.time;
@@ -141,15 +156,13 @@ public class PlayerController : MonoBehaviour
     private void HandleActions()
     {
         // Jump + Coyote Time + Double Jump
-        bool canJump =
-            (isGrounded || Time.time - lastGroundedTime <= coyoteTimeThreshold || jumpCount < maxJumpCount);
+        bool canJump = (isGrounded || Time.time - lastGroundedTime <= coyoteTimeThreshold || jumpCount < maxJumpCount);
 
         if (GameInput.JumpPressed && canJump)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumpCount++;
             isGrounded = false;
-            Debug.Log($"Jump ke-{jumpCount}");
             playerAnimator.TriggerJump();
         }
 
@@ -204,11 +217,29 @@ public class PlayerController : MonoBehaviour
 
     private void HandleCameraFollow()
     {
-        if (mainCamera != null)
-        {
-            Vector3 targetPos = new Vector3(transform.position.x, transform.position.y, mainCamera.transform.position.z);
-            mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, targetPos, Time.deltaTime * 5f);
-        }
+        if (mainCamera == null) return;
+
+        // Kamera hanya berhenti mengikuti kalau player sedang jatuh mati
+        if (isFallingToDeath) return;
+
+        // Kamera tetap mengikuti player selama belum jatuh mati
+        Vector3 targetPos = new Vector3(
+            transform.position.x,
+            transform.position.y,
+            mainCamera.transform.position.z
+        );
+
+        mainCamera.transform.position = Vector3.Lerp(
+            mainCamera.transform.position,
+            targetPos,
+            Time.deltaTime * 5f
+        );
+    }
+
+    private void HandleGameOver()
+    {
+        Debug.Log("Game Over - Player jatuh!");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     private void OnDrawGizmosSelected()
@@ -218,5 +249,9 @@ public class PlayerController : MonoBehaviour
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
         }
+
+        // Visualisasi batas jatuh
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(new Vector3(-100, fallThresholdY, 0), new Vector3(100, fallThresholdY, 0));
     }
 }
