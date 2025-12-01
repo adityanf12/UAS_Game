@@ -36,6 +36,13 @@ public class PlayerController : MonoBehaviour
     public float fallThresholdY = -10f; // posisi di bawah ini = jatuh game over
     private bool isFallingToDeath = false;
 
+    [Header("Audio Clips")]
+    public AudioClip jumpSound;
+    public AudioClip dashSound;
+    public AudioClip attackSound;
+    public AudioClip gameOverSound; 
+    private AudioSource audioSource;
+
     [Header("Camera Settings")]
     public float minGroundY = 0f; 
     public float cameraMinYOffset = 3f; 
@@ -49,6 +56,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private PlayerAnimator playerAnimator;
     private Camera mainCamera;
+    private GameManager gameManager;
 
     // ====== Running logic (double tap) ======
     private float lastLeftTap = 0f;
@@ -62,6 +70,12 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerAnimator = GetComponent<PlayerAnimator>();
         mainCamera = Camera.main;
+
+        audioSource = GetComponent<AudioSource>(); 
+        ///if (audioSource == null)
+        ///    audioSource = gameObject.AddComponent<AudioSource>();
+
+        gameManager = FindObjectOfType<GameManager>();
 
         if (attackHitbox != null)
             attackHitbox.SetActive(false);
@@ -161,6 +175,14 @@ public class PlayerController : MonoBehaviour
         lastTapTime = Time.time;
     }
 
+    private void PlaySound(AudioClip clip)
+    {
+        if (audioSource != null && clip != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
+
     private void HandleActions()
     {
         // Jump + Coyote Time + Double Jump
@@ -172,6 +194,7 @@ public class PlayerController : MonoBehaviour
             jumpCount++;
             isGrounded = false;
             playerAnimator.TriggerJump();
+            PlaySound(jumpSound);
         }
 
         // Dash
@@ -196,6 +219,7 @@ public class PlayerController : MonoBehaviour
         float dashDirection = spriteRenderer.flipX ? -1f : 1f;
         rb.velocity = new Vector2(dashDirection * dashForce * Time.fixedDeltaTime, 0);
         playerAnimator.TriggerDash();
+        PlaySound(dashSound);
     }
 
     private void DoAttackAction()
@@ -203,6 +227,7 @@ public class PlayerController : MonoBehaviour
         isAttacking = true;
         attackStartTime = Time.time;
         playerAnimator.TriggerAttack();
+        PlaySound(attackSound);
 
         if (attackHitbox != null)
             attackHitbox.SetActive(true);
@@ -247,7 +272,17 @@ public class PlayerController : MonoBehaviour
     private void HandleGameOver()
     {
         Debug.Log("Game Over - Player jatuh!");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+        PlaySound(gameOverSound);
+        
+        if (gameManager != null)
+        {
+            gameManager.GameOver();
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
     private void OnDrawGizmosSelected()
