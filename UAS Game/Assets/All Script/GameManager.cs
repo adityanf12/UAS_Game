@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
         if (isGameOver) return;
         isGameOver = true;
 
-        Time.timeScale = 0f; // pause game
+        Time.timeScale = 0f; 
         gameOverUI.SetActive(true);
     }
 

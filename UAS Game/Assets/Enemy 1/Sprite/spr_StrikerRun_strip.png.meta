@@ -113,10 +113,10 @@ TextureImporter:
       name: spr_StrikerRun_strip_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 93
-        height: 96
+        x: 29
+        y: 28
+        width: 35
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,6 +126,153 @@ TextureImporter:
       bones: []
       spriteID: 8eccd059e7272af4ab1be9dd70d87b52
       internalID: -1455999053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerRun_strip_1
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 28
+        width: 35
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4fc3e3fa804114f937aae48104ce80
+      internalID: -2020784864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerRun_strip_2
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 32
+        width: 34
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cca6d5718e39a745b7eceac52198603
+      internalID: -83378694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerRun_strip_3
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 28
+        width: 33
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ecaf8265cba75468c28cbfe81b96a7
+      internalID: -417881724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerRun_strip_4
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 28
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c1f31e6e059e48429136f2b6a547bb4
+      internalID: -301381503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerRun_strip_5
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 28
+        width: 41
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 711a4d7108e6e6d46ba5980e9d7a237d
+      internalID: -437610724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerRun_strip_6
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 31
+        width: 41
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aae0f6c990f9bd469de0581026c89c0
+      internalID: 406075440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerRun_strip_7
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 28
+        width: 39
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eebb3bdcd5857f64ea956a02d03f2ec6
+      internalID: 556093152
       vertices: []
       indices: 
       edges: []
@@ -142,6 +289,13 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       spr_StrikerRun_strip_0: -1455999053
+      spr_StrikerRun_strip_1: -2020784864
+      spr_StrikerRun_strip_2: -83378694
+      spr_StrikerRun_strip_3: -417881724
+      spr_StrikerRun_strip_4: -301381503
+      spr_StrikerRun_strip_5: -437610724
+      spr_StrikerRun_strip_6: 406075440
+      spr_StrikerRun_strip_7: 556093152
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

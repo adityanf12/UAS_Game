@@ -113,10 +113,10 @@ TextureImporter:
       name: spr_StrikerDeath_strip_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 87
-        height: 96
+        x: 15
+        y: 28
+        width: 42
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,6 +126,384 @@ TextureImporter:
       bones: []
       spriteID: 9c650deb4445fd0448ea0421d2fd8c3b
       internalID: -23327928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 28
+        width: 41
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4208ff149b3c4941a28d2fbe784261b
+      internalID: 1787526413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 28
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7019c32004303fb458088ce17866271e
+      internalID: -1923948395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_3
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 28
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf4e01081720604a99fedb627d34c72
+      internalID: 748977721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_4
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 28
+        width: 39
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41f20f384acf51438a35d78c66754ad
+      internalID: 2045387450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_5
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 28
+        width: 17
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb7ef9ef8e672b48b82540c739c752d
+      internalID: 1664275563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_6
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 28
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7589e48a9d6fb4f9f5a33e1fc39509
+      internalID: 1208204626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_7
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 28
+        width: 17
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f7496feeda9984c8c5a77078b41033
+      internalID: -1356348823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_8
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 28
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21cbac28a9ec05a4e9593eea4559bdc4
+      internalID: -1615501566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_9
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 28
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41fde1cddeb12ec4c8ca88d3395c7f88
+      internalID: 492568342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_10
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 28
+        width: 43
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0252f181c42bb6b4f96f8412ea4a2bb3
+      internalID: -1686012887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_11
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 28
+        width: 43
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f3fbfe6c731f9445878135ae9da353c
+      internalID: 34073027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_12
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 28
+        width: 43
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413975fc1d0f5764bb2afc1df0ca815d
+      internalID: 886853869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_13
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 28
+        width: 42
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ad34ca7209444a4ea02d5efc4860376
+      internalID: -773171367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_14
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 28
+        width: 42
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d704b8a03beb468439dff09dbcfe582b
+      internalID: -647268234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_15
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 28
+        width: 42
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07b44619d2f3f5f44aaa89534b488c1b
+      internalID: 1900478989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_16
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 28
+        width: 42
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5417c9aef254e6f47998ed679de3581a
+      internalID: 1756630676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_17
+      rect:
+        serializedVersion: 2
+        x: 1361
+        y: 28
+        width: 43
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7531a8f993490f84c9a4072752552a56
+      internalID: -1704642917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerDeath_strip_18
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 28
+        width: 43
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38dbe5c177fdae347b698878a7b64570
+      internalID: 165568641
       vertices: []
       indices: 
       edges: []
@@ -142,6 +520,24 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       spr_StrikerDeath_strip_0: -23327928
+      spr_StrikerDeath_strip_1: 1787526413
+      spr_StrikerDeath_strip_10: -1686012887
+      spr_StrikerDeath_strip_11: 34073027
+      spr_StrikerDeath_strip_12: 886853869
+      spr_StrikerDeath_strip_13: -773171367
+      spr_StrikerDeath_strip_14: -647268234
+      spr_StrikerDeath_strip_15: 1900478989
+      spr_StrikerDeath_strip_16: 1756630676
+      spr_StrikerDeath_strip_17: -1704642917
+      spr_StrikerDeath_strip_18: 165568641
+      spr_StrikerDeath_strip_2: -1923948395
+      spr_StrikerDeath_strip_3: 748977721
+      spr_StrikerDeath_strip_4: 2045387450
+      spr_StrikerDeath_strip_5: 1664275563
+      spr_StrikerDeath_strip_6: 1208204626
+      spr_StrikerDeath_strip_7: -1356348823
+      spr_StrikerDeath_strip_8: -1615501566
+      spr_StrikerDeath_strip_9: 492568342
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

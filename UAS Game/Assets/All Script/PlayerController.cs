@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // untuk reload scene saat game over
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(PlayerAnimator))]
@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     private bool wasGrounded = false;
 
     [Header("Game Over Settings")]
-    public float fallThresholdY = -10f; // posisi di bawah ini = jatuh game over
+    public float fallThresholdY = -10f; 
     private bool isFallingToDeath = false;
 
     [Header("Audio Clips")]
@@ -58,7 +58,6 @@ public class PlayerController : MonoBehaviour
     private Camera mainCamera;
     private GameManager gameManager;
 
-    // ====== Running logic (double tap) ======
     private float lastLeftTap = 0f;
     private float lastRightTap = 0f;
     private float doubleTapTime = 0.3f;
@@ -93,13 +92,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Cek jika player jatuh melewati batas kematian
         if (!isFallingToDeath && transform.position.y < fallThresholdY)
         {
             isFallingToDeath = true;
-            playerAnimator.TriggerFallDeath(); // animasi jatuh
-            rb.simulated = false; // hentikan fisika
-            Invoke(nameof(HandleGameOver), 1.2f); // tunggu animasi selesai
+            playerAnimator.TriggerFallDeath(); 
+            rb.simulated = false; 
+            Invoke(nameof(HandleGameOver), 1.2f);
         }
 
         HandleTimers();
@@ -185,7 +183,6 @@ public class PlayerController : MonoBehaviour
 
     private void HandleActions()
     {
-        // Jump + Coyote Time + Double Jump
         bool canJump = (isGrounded || Time.time - lastGroundedTime <= coyoteTimeThreshold || jumpCount < maxJumpCount);
 
         if (GameInput.JumpPressed && canJump)

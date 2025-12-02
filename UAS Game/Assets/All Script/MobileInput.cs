@@ -1,11 +1,8 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-// Script ini dipasang pada setiap objek tombol UI (Left, Right, Jump, dll.)
 public class MobileInput : MonoBehaviour
 {
-    // --- POINTER DOWN EVENTS ---
-
     public void OnLeftButtonDown(BaseEventData eventData)
     {
         GameInput.SetMoveLeft(true);
@@ -35,8 +32,6 @@ public class MobileInput : MonoBehaviour
         GameInput.DoAttack();
         Debug.Log("Attack Pressed");
     }
-
-    // --- POINTER UP EVENTS ---
 
     public void OnLeftButtonUp(BaseEventData eventData)
     {

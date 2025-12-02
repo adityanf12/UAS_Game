@@ -113,10 +113,10 @@ TextureImporter:
       name: spr_StrikerIdle_strip_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 93
-        height: 96
+        x: 18
+        y: 28
+        width: 39
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,6 +126,153 @@ TextureImporter:
       bones: []
       spriteID: 311680e0c7a102640b9b0a9b587a6e59
       internalID: 1719109558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerIdle_strip_1
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 28
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b19e32ab248b001478c1815e185dd1e2
+      internalID: 1042765671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerIdle_strip_2
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 28
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725a9431d3385cf4a95ac9e1d990a2fa
+      internalID: -703036519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerIdle_strip_3
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 28
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7ec211edf0aa543898e1a2a7c3fcf9
+      internalID: 1935735327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerIdle_strip_4
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 28
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0328453d4358e44ea4a5ef7d4e77d6f
+      internalID: 212920617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerIdle_strip_5
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 28
+        width: 39
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6514647ec91f85943885feafcdc07644
+      internalID: 85439961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerIdle_strip_6
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 28
+        width: 39
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570c0bd099049084d8a151d6a6e46e00
+      internalID: 528173931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerIdle_strip_7
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 28
+        width: 39
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3c672660f6b1743898c8c229ed2735
+      internalID: -1227392027
       vertices: []
       indices: 
       edges: []
@@ -142,6 +289,13 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       spr_StrikerIdle_strip_0: 1719109558
+      spr_StrikerIdle_strip_1: 1042765671
+      spr_StrikerIdle_strip_2: -703036519
+      spr_StrikerIdle_strip_3: 1935735327
+      spr_StrikerIdle_strip_4: 212920617
+      spr_StrikerIdle_strip_5: 85439961
+      spr_StrikerIdle_strip_6: 528173931
+      spr_StrikerIdle_strip_7: -1227392027
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

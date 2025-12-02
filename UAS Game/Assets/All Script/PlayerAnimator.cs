@@ -19,11 +19,9 @@ public class PlayerAnimator : MonoBehaviour
         anim.SetBool("IsAttacking", isAttacking);
         anim.SetBool("IsRunning", isRunning);
 
-        // Animasi jatuh biasa
         bool isFalling = !isGrounded && verticalVelocity < -0.1f;
         anim.SetBool("IsFalling", isFalling);
 
-        // Reset trigger lompat ketika mendarat
         if (isGrounded && isJumping)
         {
             isJumping = false;
@@ -56,6 +54,6 @@ public class PlayerAnimator : MonoBehaviour
 
     public void TriggerFallDeath()
     {
-        anim.SetTrigger("FallDeath"); // tambahkan animasi ini di Animator
+        anim.SetTrigger("FallDeath");
     }
 }

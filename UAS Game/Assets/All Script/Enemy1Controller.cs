@@ -7,13 +7,13 @@ public class EnemyController : MonoBehaviour
     [Header("Health")]
     public int maxHP = 3;
     private int currentHP;
-    public float destroyDelay = 2f; // Waktu sebelum objek musuh dihapus setelah mati
+    public float destroyDelay = 2f; 
 
     [Header("Movement")]
     public float walkSpeed = 3f;
-    public float patrolRange = 5f; // Jarak patroli dari posisi awal
+    public float patrolRange = 5f; 
     private float startX;
-    private int walkDirection = 1; // 1 = kanan, -1 = kiri
+    private int walkDirection = 1; 
 
     [Header("Attack & Detection")]
     public float detectionRange = 5f;
@@ -31,7 +31,6 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private float groundCheckRadius = 0.2f;
     [SerializeField] private LayerMask groundLayer;
 
-    // Status
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
     private EnemyAnimator enemyAnimator;
@@ -46,7 +45,6 @@ public class EnemyController : MonoBehaviour
         currentHP = maxHP;
         startX = transform.position.x;
         
-        // Cari pemain saat game dimulai (opsional, bisa diganti dengan deteksi visual)
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
             playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
@@ -59,7 +57,6 @@ public class EnemyController : MonoBehaviour
 
         bool isGrounded = CheckGroundStatus();
         
-        // 1. Cek Pemain
         CheckForPlayer();
 
         if (isChasing)
@@ -71,7 +68,6 @@ public class EnemyController : MonoBehaviour
             HandlePatrol();
         }
 
-        // 2. Update Animator
         enemyAnimator.UpdateState(
         Mathf.Abs(rb.velocity.x), 
         isAttacking,               
@@ -107,7 +103,6 @@ public class EnemyController : MonoBehaviour
 
     private void HandlePatrol()
     {
-        // Pindah arah jika mencapai batas patroli
         if (transform.position.x > startX + patrolRange && walkDirection > 0)
         {
             walkDirection = -1;
@@ -119,7 +114,6 @@ public class EnemyController : MonoBehaviour
             Flip();
         }
 
-        // Terapkan kecepatan patroli
         rb.velocity = new Vector2(walkDirection * walkSpeed, rb.velocity.y);
     }
 
@@ -129,23 +123,18 @@ public class EnemyController : MonoBehaviour
 
         if (distanceToPlayer > attackRange)
         {
-            // Pengejaran
             isAttacking = false;
             
-            // Tentukan arah ke pemain
             float direction = (playerTarget.position.x > transform.position.x) ? 1 : -1;
             walkDirection = (int)direction;
             
-            // Balik sprite jika perlu
             if (spriteRenderer.flipX == (direction > 0)) Flip();
             
-            // Lanjutkan mengejar
             rb.velocity = new Vector2(direction * walkSpeed, rb.velocity.y);
         }
         else
         {
-            // Jarak Serang
-            rb.velocity = Vector2.zero; // Berhenti bergerak saat menyerang
+            rb.velocity = Vector2.zero; 
             
             if (Time.time > lastAttackTime + attackCooldown)
             {
@@ -157,13 +146,7 @@ public class EnemyController : MonoBehaviour
     private void PerformAttack()
     {
         isAttacking = true;
-        lastAttackTime = Time.time;
-        
-        // Panggil trigger animasi attack (asumsikan Attack ada di EnemyAnimator)
-        // enemyAnimator.TriggerAttack(); 
-        
-        // Anda perlu implementasi logika untuk mematikan isAttacking setelah animasi selesai
-        // dan menjalankan logika damage ke pemain di sini.
+        lastAttackTime = Time.time;        
     }
 
     private void Flip()
@@ -171,7 +154,6 @@ public class EnemyController : MonoBehaviour
         spriteRenderer.flipX = walkDirection < 0;
     }
 
-    // Dipanggil oleh objek pemain (atau hitbox)
     public void TakeDamage(int damage)
     {
         if (isDead) return;
@@ -185,7 +167,6 @@ public class EnemyController : MonoBehaviour
         else
         {
             enemyAnimator.TriggerGetHit();
-            // Optional: Tambahkan sedikit dorongan ke belakang saat kena hit
             rb.velocity = new Vector2(-walkDirection * 3f, rb.velocity.y);
         }
     }
@@ -193,16 +174,13 @@ public class EnemyController : MonoBehaviour
     private void Die()
     {
         isDead = true;
-        rb.simulated = false; // Hentikan fisika
-        // Hentikan semua Coroutine jika ada
+        rb.simulated = false;
         
         enemyAnimator.TriggerDeath();
         
-        // Hancurkan objek setelah animasi kematian selesai
         Destroy(gameObject, destroyDelay);
     }
 
-    // Visualisasi jangkauan di Editor
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
@@ -217,7 +195,6 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawLine(new Vector3(startX - patrolRange, transform.position.y - 0.5f, 0), new Vector3(startX - patrolRange, transform.position.y + 0.5f, 0));
     }
 
-    // Fungsi tambahan untuk mendeteksi Ground (perlu groundCheck diatur di Editor)
     private void OnDrawGizmos()
     {
         if (groundCheck != null)

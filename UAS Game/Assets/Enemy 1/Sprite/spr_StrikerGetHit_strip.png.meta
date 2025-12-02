@@ -113,10 +113,10 @@ TextureImporter:
       name: spr_StrikerGetHit_strip_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 89
-        height: 96
+        x: 15
+        y: 28
+        width: 42
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,6 +126,69 @@ TextureImporter:
       bones: []
       spriteID: f2c069a5303fbdc4a8d29ff9ddd9122e
       internalID: 1290568767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerGetHit_strip_1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 28
+        width: 37
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd38c4dee5dae642a2e1a44251d45cf
+      internalID: -1768058265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerGetHit_strip_2
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 28
+        width: 38
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1075199a7b3542a46999c7aeed11217c
+      internalID: 2043035082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_StrikerGetHit_strip_3
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 28
+        width: 40
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a147fa54d9e0d1b4f8050450c1d603cf
+      internalID: 2066711808
       vertices: []
       indices: 
       edges: []
@@ -142,6 +205,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       spr_StrikerGetHit_strip_0: 1290568767
+      spr_StrikerGetHit_strip_1: -1768058265
+      spr_StrikerGetHit_strip_2: 2043035082
+      spr_StrikerGetHit_strip_3: 2066711808
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

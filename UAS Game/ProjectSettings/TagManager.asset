@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - EndLevel
   - goa
+  - Enemy
   layers:
   - Default
   - TransparentFX
