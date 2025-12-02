@@ -8,6 +8,8 @@ TagManager:
   - MobileInput
   - Button
   - Ground
+  - EndLevel
+  - goa
   layers:
   - Default
   - TransparentFX

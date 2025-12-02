@@ -22214,6 +22214,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4873935124296038650, guid: eb6ff47e93aaec54aa5e830a4d25e1db,
+        type: 3}
+      propertyPath: dashSound
+      value: 
+      objectReference: {fileID: 8300000, guid: e412f96024f9b2b499ee0a5e8d266823, type: 3}
+    - target: {fileID: 4873935124296038650, guid: eb6ff47e93aaec54aa5e830a4d25e1db,
+        type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f3117bc646a5644ab712d26e3083061, type: 3}
+    - target: {fileID: 4873935124296038650, guid: eb6ff47e93aaec54aa5e830a4d25e1db,
+        type: 3}
+      propertyPath: attackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8fc70f4ff4f5cb744a883a70a314fe1a, type: 3}
+    - target: {fileID: 4873935124296038650, guid: eb6ff47e93aaec54aa5e830a4d25e1db,
+        type: 3}
+      propertyPath: gameOverSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 70cd1dfa29eeade42bb30142dff3e934, type: 3}
     - target: {fileID: 6974386415796760836, guid: eb6ff47e93aaec54aa5e830a4d25e1db,
         type: 3}
       propertyPath: m_LocalPosition.x
